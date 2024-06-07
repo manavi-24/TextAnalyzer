@@ -45,7 +45,7 @@
       <Alert alert={alert}/>
       <div className="container my-3">
         <Routes>
-        <Route exact path="/home" element={<Textform heading="Enter text to be analysed" mode={mode} showAlert={showAlert} />} />
+        <Route exact path="/" element={<Textform heading="Enter text to be analysed" mode={mode} showAlert={showAlert} />} />
         {/*<Textform heading="Enter text to be analysed" mode={mode} showAlert={showAlert} />*/}
         <Route exact path="/about" element={<About mode={mode} />} />
         {/*<About mode={mode} />*/}
