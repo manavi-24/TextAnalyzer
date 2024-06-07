@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+.accordion-button::after {
+  color: inherit;
+}
+
+.accordion-button.bg-dark::after {
+  filter: invert(1);
+}
