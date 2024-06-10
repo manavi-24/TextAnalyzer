@@ -40,7 +40,7 @@
         }
 
         const countCharactersExcludingSpaces = (text) => {
-            return text.replace(/\s+/g, "").length;
+            return text.replace(/\s/g, "").length;
         };
         
        
