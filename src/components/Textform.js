@@ -33,7 +33,7 @@
             props.showAlert("Text has been copied", "success");
         }
         const handleExtraSpaces = () => {
-            let newText = text.replace(/\s+/g, ' ');
+            let newText = text.replace(/\s+/g, ' ').replace(/[\r\n]/g, ' ');
             setText(newText);
 
             props.showAlert("Extra spaces have been removed", "success");
@@ -63,8 +63,8 @@
 
         <div className="container my-3" style={{color: props.mode==='dark'?'white':'black'}}>
             <h2>Your text summary</h2>
-            <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} Words and {countCharactersExcludingSpaces(text)} Characters</p>
-            <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes read</p>
+            <p>{text.split(/\s+/g).filter((element)=>{return element.length!==0}).length} Words and {countCharactersExcludingSpaces(text)} Characters</p>
+            <p>{0.008 * text.split(/\s+/g).filter((element)=>{return element.length!==0}).length} Minutes read</p>
             <h2>Preview</h2>
             <p>{text.length>0?text:"Enter text to preview"}</p>   
         </div>
